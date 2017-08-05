@@ -12,5 +12,4 @@
 
 
 
-
 module.exports = WaitList;
