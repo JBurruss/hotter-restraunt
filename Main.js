@@ -36,6 +36,20 @@ app.get("/", function(req, res) {
   console.log("working!")
 });
 
+app.get("/table", function(req, res) {
+  res.sendFile(path.join(__dirname, "table.html"));
+  console.log("working!")
+});
+
+app.get("/reserv", function(req, res) {
+  res.sendFile(path.join(__dirname, "reserv.html"));
+  console.log("working!")
+});
+
+app.get("/index", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+  console.log("working!")
+});
 
 // Create New Reservation - takes in JSON input
 app.post("/api/new", function(req, res) {
