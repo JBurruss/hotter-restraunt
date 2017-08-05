@@ -24,16 +24,18 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 //// Routes
 //// =============================================================
-//
-// Basic route that sends the user first to the AJAX Page
+
 app.get("/api/table", function(req, res) {
     console.log("route hit")
   res.json(tables)
 });
 
-app.get("/obiwankenobi", function(req, res) {
-  res.json(oviwankenobi);
+// Basic route that sends the user first to the AJAX Page
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+  console.log("working!")
 });
+
 
 // Create New Reservation - takes in JSON input
 app.post("/api/new", function(req, res) {
@@ -46,6 +48,7 @@ app.post("/api/new", function(req, res) {
 
   res.json(newreservation);
 });
+
 
 
 
