@@ -1,7 +1,7 @@
 // Dependencies
 // =============================================================
 var tables = require("./table.js");
-//var WaitList = require("./WaitList.js");
+//var waitlist = require("./waitlist.js");
 
 var bodyParser = require("body-parser");
 var path = require("path");
