@@ -12,4 +12,4 @@
 
 
 
-module.exports = WaitList;
+module.exports = waitlist;
