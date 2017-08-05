@@ -1,58 +1,35 @@
 // Dependencies
 // =============================================================
-//var Table = require("./Table.js");
+var tables = require("./table.js");
 //var WaitList = require("./WaitList.js");
-var express = require("express");
-//var bodyParser = require("body-parser");
+
+var bodyParser = require("body-parser");
 var path = require("path");
 
 // Sets up the Express App
 // =============================================================
+var express = require("express");
 var app = express();
 var PORT = 8000;
 console.log("hello!!");
 
-// Sets up the Express app to handle data parsing
-//app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(bodyParser.text());
-//app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+//Sets up the Express app to handle data parsing
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Star Wars reservations (DATA)
 // =============================================================
-var reservations = [{
-    customerName: "name",
-    phoneNumber: 8007775555,
-    customerEmail: "joe@icloud.com",
-    customerID: 2000
-},
-{
-    customerName: "name",
-    phoneNumber: 8007775555,
-    customerEmail: "joe@icloud.com",
-    customerID: 2000
-},
-{
-    customerName: "name",
-    phoneNumber: 8007775555,
-    customerEmail: "joe@icloud.com",
-    customerID: 2000
-},
-{
-    customerName: "name",
-    phoneNumber: 8007775555,
-    customerEmail: "joe@icloud.com",
-    customerID: 2000
 
-}
-];
 
 //// Routes
 //// =============================================================
 //
 // Basic route that sends the user first to the AJAX Page
-app.get("/darthmaul", function(req, res) {
-  res.json(darthmaul)
+app.get("/api/table", function(req, res) {
+    console.log("route hit")
+  res.json(tables)
 });
 
 app.get("/obiwankenobi", function(req, res) {
