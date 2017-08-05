@@ -3,7 +3,7 @@
 //var Table = require("./Table.js");
 //var WaitList = require("./WaitList.js");
 var express = require("express");
-//var bodyParser = require("body-parser");
+var bodyParser = require("body-parser");
 var path = require("path");
 
 // Sets up the Express App
@@ -17,6 +17,7 @@ console.log("hello!!");
 //app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(bodyParser.text());
 //app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+
 
 // Star Wars reservations (DATA)
 // =============================================================
